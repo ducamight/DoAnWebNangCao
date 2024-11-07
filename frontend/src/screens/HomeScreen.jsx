@@ -3,7 +3,7 @@ import products from "../products"
 
 import Product from "../components/Product"
 
-const Homescreen = () => {
+const HomeScreen = () => {
   return (
     <>
         <h1>Lates Products</h1>
@@ -18,4 +18,4 @@ const Homescreen = () => {
   )
 }
 
-export default Homescreen
+export default HomeScreen
