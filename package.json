@@ -1,0 +1,15 @@
+{
+  "name": "doanwebnangcao",
+  "version": "1.0.0",
+  "description": "Ecommerce application using MERN stack",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "author": "ducamight",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
