@@ -12,11 +12,10 @@ import { Link } from 'react-router-dom';
 
 const PlaceOrderScreen = () => {
     const navigate = useNavigate();
-    const dispatch = useDispatch();
     const cart = useSelector((state) => state.cart);
-
+    
     const [createOrder, {isLoading, error}]= useCreateOrderMutation();
-
+    
     useEffect(() =>{
         if(!cart.shippingAddress.address){
             navigate('/shipping');
@@ -24,7 +23,8 @@ const PlaceOrderScreen = () => {
             navigate('/payment');
         }
     }, [cart.paymentMethod, cart.shippingAddress.address, navigate]);
-
+    
+    const dispatch = useDispatch();
     const placeOrderHandler = async()=>{
         try {
             const res = await createOrder({
@@ -38,13 +38,13 @@ const PlaceOrderScreen = () => {
             }).unwrap();
             dispatch(clearCartItems());
             navigate(`/order/${res._id}`); 
-        } catch (error) {
-            toast.error(error);
+        } catch (err) {
+            toast.error(err);
         }
     }
 
     return (
-        <>
+        <>  
             <CheckoutSteps step1 step2 step3 step4 />
             <Row>
                 <Col md={8}>
@@ -135,7 +135,7 @@ const PlaceOrderScreen = () => {
                             <ListGroup.Item>
                                 <Button type='button' 
                                         className='btn-block' 
-                                        disabled={cart.cartItems.length === 0}
+                                        disabled={cart.cartItems === 0}
                                         onClick={placeOrderHandler}
                                 >
                                     Place Order
