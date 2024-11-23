@@ -2,6 +2,7 @@ main {
   min-height: 80vh;
 }
 
+
 .rating span {
   margin: 0.1rem;
 }
@@ -45,9 +46,14 @@ table th {
 
 .carousel-caption {
   position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.811);
+  padding: 20px;
 }
+.carousel-caption p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
