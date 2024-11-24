@@ -2,7 +2,8 @@ import { useNavigate } from 'react-router-dom';
 import { Badge, Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
 import { LinkContainer } from 'react-router-bootstrap';
-import logo from '../assets/logo.png';
+import logo2 from '../assets/logo2.png';
+import logo3 from '../assets/Logo3.png'
 import { useSelector, useDispatch } from 'react-redux';
 import { useLogoutMutation } from '../slices/usersApiSlice';
 import { logout } from '../slices/authSlice';
@@ -31,12 +32,12 @@ const Header = () => {
   
   return (
     <header>
-        <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
+        <Navbar bg='black' variant='dark' expand='lg' collapseOnSelect>
         <Container> 
           <LinkContainer to="/">
             <Navbar.Brand href='/'>
-              <img src={logo} alt="BookShop"/>
-              BookShop
+              <img src={logo3} alt="BookShop" className='logo-image'/>
+              Books World
             </Navbar.Brand>
           </LinkContainer>
 

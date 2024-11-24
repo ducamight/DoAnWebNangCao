@@ -1,7 +1,13 @@
 main {
   min-height: 80vh;
+  background-color: #ffffff9b;
 }
 
+.logo-image {
+  width: 80px; /* Chiều rộng */
+  height: 80px; /* Chiều cao */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+}
 
 .rating span {
   margin: 0.1rem;
@@ -42,18 +48,155 @@ table th {
 
 .review button {
   margin-top: 10px;
+  padding: 10px 20px; /* Thêm khoảng cách nội dung */
+  font-size: 1rem; /* Tăng kích thước chữ */
+  font-weight: bold; /* Làm nổi bật chữ */
+  color: #fff; /* Chữ màu trắng */
+  background-color: #1a4d8f; /* Nền xanh dương đậm */
+  border: none; /* Loại bỏ viền */
+  border-radius: 5px; /* Bo góc */
+  cursor: pointer; /* Con trỏ dạng nhấn */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
+}
+
+.review button:hover {
+  background-color: #0a1724; /* Tông màu đậm hơn khi hover */
 }
 
 .carousel-caption {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.811);
-  padding: 20px;
+  bottom: 20px; /* Đẩy phần chú thích lên một chút */
+  left: 10%; /* Căn lề trái */
+  right: 10%; /* Căn lề phải */
+  background: rgba(26, 77, 143, 0.8); /* Nền xanh dương đậm trong suốt */
+  padding: 15px 20px; /* Tăng khoảng cách nội dung */
+  border-radius: 8px; /* Bo góc mềm mại */
+  color: #ffffff; /* Chữ màu trắng */
+  text-align: center; /* Căn giữa nội dung */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Hiệu ứng nổi */
+  font-size: 1rem; /* Kích thước chữ vừa phải */
+  line-height: 1.6; /* Tăng khoảng cách dòng */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Hiệu ứng mượt */
 }
+
+.carousel-caption:hover {
+  transform: translateY(-5px); /* Di chuyển nhẹ khi hover */
+  opacity: 0.95; /* Tăng độ rõ khi hover */
+}
+
 .carousel-caption p {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1rem; /* Đồng bộ kích thước chữ */
+  line-height: 1.8; /* Tăng khoảng cách dòng */
+  margin: 0; /* Xóa khoảng cách mặc định */
+  color: #f3e4b2; /* Màu chữ vàng nhạt */
+}
+
+
+h1 {
+  font-size: 2.5rem; /* Kích thước chữ lớn */
+  font-weight: bold; /* Chữ đậm */
+  color: #1a4d8f; /* Màu xanh dương đậm */
+  text-align: center; /* Căn giữa */
+  text-transform: uppercase; /* Viết hoa toàn bộ */
+  margin: 20px 0; /* Khoảng cách trên dưới */
+  padding: 10px; /* Khoảng cách nội dung */
+  border-bottom: 5px solid #212121; /* Đường gạch dưới màu vàng nhạt */
+  line-height: 1.5; /* Tăng khoảng cách giữa các dòng */
+}
+
+
+h3 {
+  font-size: 1.5rem; /* Kích thước chữ nhỏ hơn H2 */
+  font-weight: 600; /* Chữ đậm nhẹ */
+  color: #1a4d8f; /* Màu xanh dương đậm */
+  margin: 10px 0; /* Khoảng cách trên dưới */
+  text-align: left; /* Căn trái */
+  text-transform: capitalize; /* Viết hoa chữ đầu */
+  padding-bottom: 5px; /* Tạo khoảng cách dưới */
+  transition: color 0.3s ease, border-color 0.3s ease; /* Hiệu ứng chuyển màu và gạch dưới */
+}
+
+h2 {
+  font-size: 2rem; /* Kích thước chữ */
+  font-weight: bold; /* Đậm nổi bật */
+  color: #1a4d8f; /* Màu xanh dương đậm */
+  text-align: left; /* Căn trái */
+  margin: 15px 0; /* Khoảng cách trên dưới */
+  border-left: 5px solid #f3e4b2; /* Thanh màu vàng nhạt bên trái */
+  padding-left: 15px; /* Tạo khoảng cách với thanh */
+  line-height: 1.4; /* Khoảng cách dòng */
+  transition: color 0.3s ease; /* Hiệu ứng chuyển màu */
+}
+
+.card {
+  border: none; /* Loại bỏ viền mặc định */
+  border-radius: 10px; /* Bo góc mềm mại */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.445); /* Hiệu ứng nổi */
+  overflow: hidden; /* Ẩn phần thừa nếu có */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển mượt */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Nâng thẻ lên khi hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Tăng độ bóng khi hover */
+}
+
+.card-img-top {
+  border-bottom: 3px solid #f3e4b2; /* Đường gạch màu vàng nhạt phía dưới ảnh */
+}
+
+.card-body {
+  padding: 15px; /* Tăng khoảng cách nội dung */
+  background-color: #ffffff; /* Nền trắng để làm nổi bật nội dung */
+  color: #1a4d8f; /* Văn bản màu xanh dương đậm */
+}
+
+.card-title {
+  font-size: 1.2rem; /* Kích thước chữ tiêu đề */
+  font-weight: bold; /* Làm nổi bật tiêu đề */
+  margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+  color: #1a4d8f; /* Màu xanh dương đậm */
+}
+
+.card-text {
+  font-size: 1rem; /* Kích thước chữ văn bản */
+  line-height: 1.5; /* Khoảng cách dòng dễ đọc */
+  color: #555555; /* Màu chữ xám đậm */
+}
+
+.card-footer {
+  background-color: #f3e4b2; /* Nền vàng nhạt cho chân thẻ */
+  color: #1a4d8f; /* Chữ màu xanh dương đậm */
+  padding: 10px; /* Khoảng cách nội dung chân thẻ */
+  border-top: 1px solid #e0e0e0; /* Đường phân cách mờ */
+  text-align: center; /* Căn giữa nội dung */
+}
+
+.card-body {
+  padding: 20px; /* Tăng khoảng cách nội dung */
+  color: #1a4d8f; /* Màu xanh dương đậm cho văn bản */
+  font-family: 'Arial', sans-serif; /* Phông chữ hiện đại */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển mượt */
+}
+
+.card-body h5 {
+  font-size: 1.5rem; /* Tiêu đề nhỏ */
+  font-weight: bold; /* Chữ đậm */
+  color: #1a4d8f; /* Màu xanh dương đậm */
+  margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+}
+
+.card-body p {
+  font-size: 1rem; /* Kích thước chữ văn bản */
+  line-height: 1.6; /* Khoảng cách dòng thoải mái */
+  color: #555555; /* Văn bản màu xám đậm */
+  margin-bottom: 15px; /* Khoảng cách dưới văn bản */
+}
+
+.card-body a {
+  font-size: 1rem; /* Kích thước chữ liên kết */
+  font-weight: bold; /* Chữ đậm */
+  text-decoration: none; /* Loại bỏ gạch chân */
+  padding: 10px 15px; /* Thêm khoảng cách bên trong */
 }
 

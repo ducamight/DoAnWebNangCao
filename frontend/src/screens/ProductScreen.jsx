@@ -1,7 +1,7 @@
 import { useState } from 'react'; 
 import { useParams, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { Form, Row, Col, Image, ListGroup, Card, Button} from 'react-bootstrap';
+import { Form, Row, Col, Image, ListGroup, Card, Button, ListGroupItem} from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import Rating from '../components/Rating';
 import { useGetProductDetailsQuery, useCreateReviewMutation } from '../slices/productsApiSlice.js';
@@ -54,9 +54,9 @@ const ProductScreen = () => {
 
   return (
     <>
-        <Link className='btn btn-light my-p3' to='/'>
+        {/* <Link className='btn btn-light my-p3' to='/'>
             Go Back
-        </Link>
+        </Link> */}
 
         { isLoading ? (
             <Loader/>
@@ -75,12 +75,15 @@ const ProductScreen = () => {
                     <ListGroup.Item>
                         <h3>{product.name}</h3>
                     </ListGroup.Item>
+                    <ListGroupItem>
+                        <strong>Author: </strong>{product.author}
+                    </ListGroupItem>
                     <ListGroup.Item>
                         <Rating value={product.rating} text={`${product.numReviews} reviews`} />
                     </ListGroup.Item>
 
-                    <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
-                    <ListGroup.Item>Description: {product.description} </ListGroup.Item>
+                    <ListGroup.Item><strong>Price:</strong> ${product.price}</ListGroup.Item>
+                    <ListGroup.Item><strong>Description: </strong>{product.description} </ListGroup.Item>
                 </ListGroup>
 
             </Col>
@@ -157,8 +160,8 @@ const ProductScreen = () => {
                             <p>{review.comment}</p>
                         </ListGroup.Item>
                     ))}
+                        <h2>Write a Customer Review</h2>
                         <ListGroup.Item>
-                            <h2>Write a Customer Review</h2>
 
                             {loadingProductReivew && <Loader/>}
 

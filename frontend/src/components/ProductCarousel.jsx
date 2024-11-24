@@ -14,9 +14,10 @@ const ProductCarousel = () => {
     <Message variant="danger">{error?.data?.message || error.error}</Message>
   ) : (
     <Row className="mb-4">
+      <h1>🔥 BESTSLLER 🔥</h1>
       {products.map((product) => (
         <Col key={product._id} sm={12} md={4} lg={4} className="mb-3">
-          <Card className="h-100 bg-primary text-white">
+          <Card>
             <Link to={`/product/${product._id}`}>
               <Image
                 src={product.image}
@@ -30,7 +31,6 @@ const ProductCarousel = () => {
               <Card.Text className="text-center">
                 ${product.price.toFixed(2)}
               </Card.Text>
-
             </Card.Body>
           </Card>
         </Col>
