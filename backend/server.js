@@ -5,7 +5,7 @@ import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import { notFound, errorHandler } from './middleware/errormiddleware.js';
+import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 
 import connectDB from './config/db.js';
 import productRoutes from './routes/productRoutes.js';
@@ -55,7 +55,7 @@ if(process.env.NODE_ENV === 'production'){
     });
 }
 
-app.use(notFound);
-app.use(errorHandler);
+app.use( notFound);
+app.use( errorHandler);
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));
