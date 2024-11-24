@@ -27,7 +27,7 @@ const HomeScreen = () => {
         <Loader/>
       ) : error ? (<Message variant='danger'> {error?.data?.message || error.error} </Message>) : (<>
         <Meta />
-        <h1>📖 NEW BOOK FOR YOU 📖</h1>
+        <h1>📖 NEW COMICS FOR YOU 📖</h1>
         <Row>
             { data.products.map((product) => (
                 <Col key={product._id} sm={12} md={6} lg={4} xl={3}>

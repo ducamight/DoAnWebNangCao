@@ -23,7 +23,6 @@ const ProductCarousel = () => {
                 src={product.image}
                 alt={product.name}
                 fluid
-                className="card-img-top"
               />
             </Link>
             <Card.Body>

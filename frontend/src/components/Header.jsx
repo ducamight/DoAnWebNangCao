@@ -37,7 +37,7 @@ const Header = () => {
           <LinkContainer to="/">
             <Navbar.Brand href='/'>
               <img src={logo3} alt="BookShop" className='logo-image'/>
-              Books World
+              COMICS WORLD
             </Navbar.Brand>
           </LinkContainer>
 

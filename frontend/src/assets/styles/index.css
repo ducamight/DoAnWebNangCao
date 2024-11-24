@@ -3,6 +3,11 @@ main {
   background-color: #ffffff9b;
 }
 
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .logo-image {
   width: 80px; /* Chiều rộng */
   height: 80px; /* Chiều cao */
