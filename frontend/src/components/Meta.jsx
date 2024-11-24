@@ -9,7 +9,7 @@ const Meta = ({ title, description, keywords }) => {
   );
 };
 Meta.defaultProps = {
-  title: 'Welcome To COMIC WORLD',
+  title: 'COMIC WORLD',
   description: 'We sell the best comic for cheap',
   keywords: 'comic, cartoon, manga, book',
 };
