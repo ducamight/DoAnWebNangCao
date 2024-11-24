@@ -14,7 +14,7 @@ const ProductCarousel = () => {
     <Message variant="danger">{error?.data?.message || error.error}</Message>
   ) : (
     <Row className="mb-4">
-      <h1>🔥 BESTSLLER 🔥</h1>
+      <h1>🔥 BESTSELLER 🔥</h1>
       {products.map((product) => (
         <Col key={product._id} sm={12} md={4} lg={4} className="mb-3">
           <Card>
