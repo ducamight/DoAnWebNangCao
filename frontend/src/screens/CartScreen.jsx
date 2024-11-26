@@ -27,6 +27,10 @@ const CartScreen = () => {
         navigate(`/login?redirect=/shipping`);
     };
 
+    const continueShoppingHandler = ()=>{
+        navigate(`/`);
+    };
+
     return (
         <Row>
             <Col md={8}>
@@ -88,6 +92,11 @@ const CartScreen = () => {
                             ${ cartItems.reduce((acc, item) => acc + item.qty * item.price, 0).toFixed(2) }
                         </ListGroup.Item>
 
+                        <ListGroup.Item>
+                            <Button type="button" className="button" disabled={ cartItems.length === 0} onClick={continueShoppingHandler}>
+                                Coninue Shopping
+                            </Button>
+                        </ListGroup.Item>
                         <ListGroup.Item>
                             <Button type="button" className="btn-block" disabled={ cartItems.length === 0} onClick={checkoutHandler}>
                                 Proceed To Checkout

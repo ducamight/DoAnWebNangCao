@@ -75,14 +75,15 @@ const ProductScreen = () => {
                     <ListGroup.Item>
                         <h3>{product.name}</h3>
                     </ListGroup.Item>
-                    <ListGroupItem>
-                        <strong>Author: </strong>{product.author}
-                    </ListGroupItem>
                     <ListGroup.Item>
                         <Rating value={product.rating} text={`${product.numReviews} reviews`} />
                     </ListGroup.Item>
+                    <ListGroupItem>
+                        <strong>Author: </strong>{product.author}
+                    </ListGroupItem>
+                    <ListGroupItem><strong>Category: </strong>{product.category}</ListGroupItem>
 
-                    <ListGroup.Item><strong>Price:</strong> ${product.price}</ListGroup.Item>
+                    {/* <ListGroup.Item><strong>Price:</strong> ${product.price}</ListGroup.Item> */}
                     <ListGroup.Item><strong>Description: </strong>{product.description} </ListGroup.Item>
                 </ListGroup>
 

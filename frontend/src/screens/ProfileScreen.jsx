@@ -53,7 +53,7 @@ const ProfileScreen = () => {
 
                 <Form onSubmit={submitHandler}>
                     <Form.Group controlId='name' className='my-2'>
-                        <Form.Label>Name</Form.Label>
+                        <Form.Label><strong>Name</strong></Form.Label>
                         <Form.Control
                             type='name'
                             placeholder='Enter name'
@@ -63,7 +63,7 @@ const ProfileScreen = () => {
                     </Form.Group>
 
                     <Form.Group controlId='email' className='my-2'>
-                        <Form.Label>Email Address</Form.Label>
+                        <Form.Label><strong>Email Address</strong></Form.Label>
                         <Form.Control
                             type='email'
                             placeholder='Enter email'
@@ -73,7 +73,7 @@ const ProfileScreen = () => {
                     </Form.Group>
 
                     <Form.Group controlId='password' className='my-2'>
-                        <Form.Label>Password</Form.Label>
+                        <Form.Label><strong>Password</strong></Form.Label>
                         <Form.Control
                             type='password'
                             placeholder='Enter password'
@@ -83,7 +83,7 @@ const ProfileScreen = () => {
                     </Form.Group>
 
                     <Form.Group controlId='confirmPassword' className='my-2'>
-                        <Form.Label>Confirm Password</Form.Label>
+                        <Form.Label><strong>Confirm Password</strong></Form.Label>
                         <Form.Control
                             type='confirmPassword'
                             placeholder='Confirm password'
